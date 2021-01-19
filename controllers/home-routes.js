@@ -31,6 +31,7 @@ router.get("/", (req, res) => {
             );
             res.render("homepage", {
                 posts,
+                LoggedIn: req.session.loggedIn
             });
         })
         .catch((err) => {
