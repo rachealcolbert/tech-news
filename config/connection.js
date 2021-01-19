@@ -1,9 +1,16 @@
-const Sequelize = require('sequelize');
+const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize('technews_db', 'username', 'password', {
-    host: 'locathost',
-    dialect: 'mysql',
-    port: 3306
-});
+require("dotenv").config();
+
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PW,
+  {
+    host: "locathost",
+    dialect: "mysql",
+    port: 3306,
+  }
+);
 
 module.exports = sequelize;
