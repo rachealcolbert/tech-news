@@ -10,3 +10,26 @@
         </div>
     </div>
 </article>
+
+<form class="comment-form">
+    <div>
+        <textarea name="comment-body"></textarea>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-info btn-sm">add comment</button>
+    </div>
+</form>
+
+<div class="comments">
+    {{#each post.comments}}
+    <section class="comment">
+        <div class="meta">
+            {{user.username}} on {{created_at}}
+        </div>
+        <div class="text">
+            {{comment_text}}
+        </div>
+    </section>
+    {{/each}}
+</div>
