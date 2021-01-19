@@ -7,7 +7,27 @@ const sequelize = require('../config/connection');
 class Comment extends Model {}
 
 Comment.init({
-    // columns will go here
+    id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true
+    },
+    Comment_text: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    post_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    },
+    user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'user',
+            key: 'id'
+        }
+    }
 }, {
     sequelize,
     freezeTableName: true,
