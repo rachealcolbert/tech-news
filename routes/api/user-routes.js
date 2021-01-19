@@ -33,7 +33,18 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', (req, res) => {});
+router.post('/', (req, res) => {
+    User.create({
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password
+        })
+        .them(dbUserData => res.json(dbUserData))
+        .cathc(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
 router.put('/:id', (req, res) => {});
 
