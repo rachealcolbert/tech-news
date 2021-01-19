@@ -2,7 +2,7 @@
 
 This is a CMS-style blog site for a developer who writes tech so they an publish articles, blog posts, and their thoughts and opinions.
 
-**Link to GitHub Repo:** https://github.com/rachealcolbert/retail-shop
+**Link to GitHub Repo:** https://github.com/rachealcolbert/tech-news
 
 **Screenshot of Application:**
 
